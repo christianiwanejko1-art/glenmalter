@@ -37,6 +37,15 @@
   padding: 16px;
 }
 
+
+#verifyForm input {
+  padding: 16px 32px;
+  margin: 4px;
+  min-width: 75px;
+  border: none;
+}
+
+
 #verficationCard h2 {
   font-weight: 400;
 }
