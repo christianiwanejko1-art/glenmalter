@@ -57,3 +57,94 @@
   padding: 16px 64px;
   border: none;
 }
+
+/* home page */
+
+.logo {
+  font-family: 'Lora', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #6E260E;
+}
+
+nav {
+  display: inline-flex;
+  width: 100vw;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 32px;
+  background-color: white;
+}
+
+.navigation {
+  width: 60%;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  display: flex;
+}
+
+.navigation li {
+  display: inline-flex;
+  list-style-type: none;
+}
+
+#homeBanner {
+  background-color: green;
+  background-image: radial-gradient(circle,hsla(0, 0%, 100%, 0.227) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 100%), url('./assets/whiskeyhome.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr;
+  z-index: -1;
+}
+
+#homeRight {
+  grid-column: 3;
+  width: 100%;
+  height: 100%;
+  color: white;
+  align-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 124px;
+}
+
+#homeRightText h1 {
+  font-family: 'Lora', serif;
+  font-size: 48px;
+}
+
+#homeRightText hr {
+  width: 10%;
+  margin: 16px auto;
+}
+
+#homeRightText button {
+  margin: 16px auto;
+  font-family: 'Lora', serif;
+  background-color: #6E260E;
+  color: white;
+  padding: 16px 64px;
+  border: none;
+}
+
+#mainContent {
+  height: 100vh;
+  width: 100vw;
+}
+
+#video {
+  width: 100%;
+  height: 100vh;
+  background-color: green;
+}
+
+#video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
