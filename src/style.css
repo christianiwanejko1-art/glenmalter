@@ -158,7 +158,30 @@ nav {
 }
 
 section img {
-  width: 400px;
-  height: 400px;
+  max-width: 600px;
+  max-height: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
 }
 
+#mainContent section {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionImg {
+  width: 50%;
+}
+
+#mainContent section {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  padding: 64px;
+}
+
+.sectionText1 {
+  width: 50%;
+}
