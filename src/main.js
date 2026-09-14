@@ -8,7 +8,7 @@ if (document.cookie.includes("ageVerified=true")) {
 app.innerHTML =  `<div id="verifyHome">
       <div id="verificationCard">
           <h1 class="verifyInfo">Glenmalter</h1>
-          <h2 class="verifyInfo">Please enter your date of birth.</h2>
+          <h2 class="verifyInfo verifyApp">Please enter your date of birth.</h2>
           <div class="verifyInfo" id="verifyForm">
               <input type="number" id="dd" placeholder="DD" min="1" max="31">
               <input type="number" id="mm" placeholder="MM" min="1" max="12">

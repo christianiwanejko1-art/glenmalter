@@ -6,6 +6,10 @@
   font-weight: 400;
 }
 
+h1, h2 {
+  font-family: 'Lora', serif;
+  font-size: 48px;
+}
 
 /* verify the age of a customer */
 #verifyHome {
@@ -36,6 +40,9 @@
   padding: 16px;
 }
 
+.verifyApp {
+  font-size: 24px;
+}
 
 #verifyForm input {
   padding: 16px 32px;
@@ -115,12 +122,12 @@ nav {
   font-size: 48px;
 }
 
-#homeRightText hr {
+hr  {
   width: 10%;
   margin: 16px auto;
 }
 
-#homeRightText button {
+button {
   margin: 16px auto;
   font-family: 'Lora', serif;
   background-color: #6E260E;
@@ -180,8 +187,66 @@ section img {
   margin: 0 auto;
   align-items: center;
   padding: 64px;
+  padding-bottom: 0;
 }
 
 .sectionText1 {
   width: 50%;
+  box-sizing: border-box;
+  padding: 48px;
+}
+
+#video {
+  margin: 64px 0;
+  padding-top: 64px;
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+  overflow: hidden;
+}
+
+
+.videoExplain {
+  position: absolute;
+  font-size: 32px;
+  color: white;
+  grid-area: 1 / 1;
+  text-align: left;
+  display: flex;
+  background-color: #45454562;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  padding: 64px;
+  box-sizing: border-box;
+}
+
+.videoExplain2 {
+  padding: 32px;
+  margin-left: 0 128px;
+}
+
+#distilleryBtn {
+  background-color: rgba(115, 115, 115, 0.6);
+  border-radius: 8px;
+}
+
+@media (max-width: 680px) {
+  #mainContent section{
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sectionImg {
+    width: 100%;
+  }
+
+  .sectionText1 {
+    width: 100%;
+  }
+
+  #homeBanner {
+    display: block;
+  }
 }
