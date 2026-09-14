@@ -104,6 +104,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   z-index: -1;
+  margin-bottom: 64px;
 }
 
 #homeRight {
@@ -232,13 +233,11 @@ section img {
 
 #footer {
   margin-top: 128px;
-  height: 50vh;
+  height: auto;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 10fr 1fr;
   background-color: black;
-
 }
 
 .footer-item {
@@ -249,8 +248,8 @@ section img {
   margin: 0 auto;
   padding: 32px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   font-size: 32px;
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
@@ -289,8 +288,6 @@ section img {
   padding: 8px 0;
 }
 
-
-
 .footer-2 {
   box-sizing: border-box;
   overflow: hidden;
@@ -326,4 +323,36 @@ section img {
   #homeBanner {
     display: block;
   }
+
+  #footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-1,.footer-2,.footer-3,.footer-bottom {
+    grid-column: 1;
+  }
+
+  .footer-1 {
+    grid-row: 1;
+  }
+
+  .footer-2 {
+    grid-row: 2;
+  }
+
+  .footer-3 {
+    grid-row: 3;
+  }
+
+  .footer-bottom {
+    grid-row: 4;
+  }
+  
+  .footer-item {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0;
+  }
+
 }
