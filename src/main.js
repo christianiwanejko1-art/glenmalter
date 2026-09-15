@@ -33,12 +33,20 @@ confirmAgeBtn.addEventListener('click', function(){
     // document.cookie = "ageVerified=true; max-age=86400; path=/"; // store cookie age verified
     app.innerHTML = `    <div id="appHome">
         <nav>
+            <div class="navclosed navicon"><img src="../src/assets/menu.png"></div>
             <h1 class="logo">Glenmalter</h1>
             <ul class="navigation">
-                <li>Whisky</li>
-                <li>Distillery Experience</li>
-                <li>Story</li>
+                <li><a href="shop">Whisky</a></li>
+                <li><a href="distillery">Distillery Experience</a></li>
+                <li><a href="story">Story</a></li>
             </ul>
+            <div class="mobilenav">
+                <ul class="mobilenavigation">
+                    <li><a href="whisky">Whisky</a></li>
+                    <li><a href="distillery">Distillery Experience</a></li>
+                    <li><a href="story">Story</a></li>
+                </ul>
+            </div>
         </nav>
         <div id="homeBanner">
             <div id="homeRight">
@@ -112,7 +120,26 @@ confirmAgeBtn.addEventListener('click', function(){
             </div>
         </div>
     </div>`; // load home page
+// nav bar btn to open and close
+const navbarburger = document.querySelector(".navicon");
+let statusClosed = true;
+
+navbarburger.addEventListener('click', function() {
+    if (statusClosed) {
+        statusClosed = false;
+        navbarburger.classList.remove("navclosed");
+        navbarburger.classList.add("navopen");
+        console.log('is now open');
+    } else if (!statusClosed) {
+        statusClosed = true;
+        navbarburger.classList.remove("navopen");
+        navbarburger.classList.add("navclosed");
+        console.log('is now closed');
+    }
+})
   }
 })
+
+
 
 })
