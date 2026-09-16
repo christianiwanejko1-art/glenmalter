@@ -1,4 +1,13 @@
+import bottle2 from "./assets/bottle2.jpg";
+import bottle3 from "./assets/bottle3.jpg";
+import video from "./assets/video.mp4";
+import hamburger from "./assets/menu.png";
+
 window.addEventListener('load', function () {
+
+// images import
+
+
 
 const app = document.getElementById('app');
 if (document.cookie.includes("ageVerified=true")) {
@@ -33,7 +42,7 @@ confirmAgeBtn.addEventListener('click', function(){
     // document.cookie = "ageVerified=true; max-age=86400; path=/"; // store cookie age verified
     app.innerHTML = `    <div id="appHome">
         <nav>
-            <div class="navclosed navicon"><img src="../src/assets/menu.png"></div>
+            <div class="navclosed navicon"><img src="${hamburger}"></div>
             <h1 class="logo">Glenmalter</h1>
             <ul class="navigation">
                 <li><a href="shop">Whisky</a></li>
@@ -61,7 +70,7 @@ confirmAgeBtn.addEventListener('click', function(){
         <div id="mainContent">
             <section>
                 <div class="sectionImg">
-                    <img src="../src/assets/bottle2.jpg">
+                    <img src="${bottle2}">
                 </div>
                 <div class="sectionText1">
                     <h2>Pleasing whiskeys</h2>
@@ -80,13 +89,13 @@ confirmAgeBtn.addEventListener('click', function(){
                     <button>Find it now</button>
                 </div>
                 <div class="sectionImg">
-                    <img src="../src/assets/bottle3.jpg">
+                    <img src="${bottle3}">
                 </div>
             </section>
         </div>
         <div id="video">
             <video autoplay loop muted playsinline>
-                <source src="../src/assets/video.mp4" type="video/mp4">
+                <source src="${video}" type="video/mp4">
             </video>
             <div class="videoExplain">
                 <h2>Take a step into OUR DISTILLERY</h2>
