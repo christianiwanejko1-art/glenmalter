@@ -6,6 +6,10 @@
   font-weight: 400;
 }
 
+#app {
+  overflow: hidden;
+}
+
 h1, h2 {
   font-family: 'Lora', serif;
   font-size: 48px;
@@ -102,11 +106,23 @@ nav {
 
 .mobilenavigation {
   list-style-type: none;
+  position: absolute;
+  background-color: #6E260E;
+}
+
+.mobilenavigation li {
+  color: white;
+}
+
+.mobilenavigation li:hover {
+  background-color: white;
+  color: black;
 }
 
 .mobilenav {
   display: none;
 }
+
 
 
 .navicon {
@@ -348,6 +364,25 @@ section img {
     width: 100%;
   }
 
+
+  .mobilenav {
+    background-color:red;
+    width: 100%;
+  }
+
+  .navopen {
+    display: block;
+  }
+
+  .mobilenavigation {
+    width: 100%;
+  }
+
+  .mobilenavigation li {
+    padding: 16px;
+    width: 100%;
+  }
+
   #homeBanner {
     align-items: center;
     display: flex;
@@ -424,7 +459,4 @@ section img {
 
   }
 
-  .mobilenav {
-    display: block;
-  }
 }

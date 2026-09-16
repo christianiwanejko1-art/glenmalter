@@ -40,14 +40,14 @@ confirmAgeBtn.addEventListener('click', function(){
                 <li><a href="distillery">Distillery Experience</a></li>
                 <li><a href="story">Story</a></li>
             </ul>
-            <div class="mobilenav">
-                <ul class="mobilenavigation">
-                    <li><a href="whisky">Whisky</a></li>
-                    <li><a href="distillery">Distillery Experience</a></li>
-                    <li><a href="story">Story</a></li>
-                </ul>
-            </div>
         </nav>
+        <div class="mobilenav">
+            <ul class="mobilenavigation">
+                <a href="whisky"><li>Whisky</li></a>
+                <a href="distillery"><li>Distillery Experience</li></a>
+                <a href="story"><li>Story</li></a>
+            </ul>
+        </div>
         <div id="homeBanner">
             <div id="homeRight">
                 <div id="homeRightText">
@@ -122,19 +122,18 @@ confirmAgeBtn.addEventListener('click', function(){
     </div>`; // load home page
 // nav bar btn to open and close
 const navbarburger = document.querySelector(".navicon");
+const mobilenav = document.querySelector(".mobilenav");
 let statusClosed = true;
 
 navbarburger.addEventListener('click', function() {
     if (statusClosed) {
         statusClosed = false;
-        navbarburger.classList.remove("navclosed");
-        navbarburger.classList.add("navopen");
-        console.log('is now open');
+        mobilenav.classList.remove("navclosed");
+        mobilenav.classList.add("navopen");
     } else if (!statusClosed) {
         statusClosed = true;
-        navbarburger.classList.remove("navopen");
-        navbarburger.classList.add("navclosed");
-        console.log('is now closed');
+        mobilenav.classList.remove("navopen");
+        mobilenav.classList.add("navclosed");
     }
 })
   }
