@@ -36,7 +36,7 @@ confirmAgeBtn.addEventListener('click', function(){
   const yy = document.getElementById('yy');
   if (yy.value <= 2008 && yy.value !== "" && yy.value >= 1900){
     // load site/home page
-    // document.cookie = "ageVerified=true; max-age=86400; path=/"; // store cookie age verified
+    document.cookie = "ageVerified=true; max-age=20; path=/"; // store cookie age verified
     app.innerHTML = `    <div id="appHome">
         <nav>
             <div class="navclosed navicon"><img src="${hamburger}"></div>
