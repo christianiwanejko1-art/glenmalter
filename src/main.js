@@ -1,7 +1,7 @@
-import bottle2 from "./assets/bottle2.jpeg";
-import bottle3 from "./assets/bottle3.jpeg";
-import video from "./assets/video.mp4";
-import hamburger from "./assets/menu.png";
+const bottle2 = new URL("./assets/bottle2.jpeg", import.meta.url).href;
+const bottle3 = new URL("./assets/bottle3.jpeg", import.meta.url).href;
+const video = new URL("./assets/bottle2.mp4", import.meta.url).href;
+const hamburger = new URL("./assets/menu.png", import.meta.url).href;
 
 window.addEventListener('load', function () {
 
