@@ -1,6 +1,6 @@
 const bottle2 = new URL("./assets/bottle2.jpeg", import.meta.url).href;
 const bottle3 = new URL("./assets/bottle3.jpeg", import.meta.url).href;
-const video = new URL("./assets/videdo.mp4", import.meta.url).href;
+const video = new URL("./assets/video.mp4", import.meta.url).href;
 const hamburger = new URL("./assets/menu.png", import.meta.url).href;
 
 window.addEventListener('load', function () {
