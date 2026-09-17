@@ -5,9 +5,6 @@ import hamburger from "./assets/menu.png";
 
 window.addEventListener('load', function () {
 
-// images import
-
-
 
 const app = document.getElementById('app');
 if (document.cookie.includes("ageVerified=true")) {
