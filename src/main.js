@@ -1,7 +1,7 @@
-import bottle2 from "./assets/bottle2.jpg";
-import bottle3 from "./assets/bottle3.jpg";
-import video from "./assets/video.mp4";
-import hamburger from "./assets/menu.png";
+// import bottle2 from "./assets/bottle2.jpg";
+// import bottle3 from "./assets/bottle3.jpg";
+// import video from "./assets/video.mp4";
+// import hamburger from "./assets/menu.png";
 
 window.addEventListener('load', function () {
 
