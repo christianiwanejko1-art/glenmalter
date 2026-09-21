@@ -5,44 +5,12 @@ const hamburger = new URL("./assets/menu.png", import.meta.url).href;
 
 window.addEventListener('load', function () {
 
-
-const app = document.getElementById('app');
-if (document.cookie.includes("ageVerified=true")) {
-  // laod home page
-  app.innerHTML = '<p>laoded home page</p>';
-} else {
-app.innerHTML =  `<div id="verifyHome">
-      <div id="verificationCard">
-          <h1 class="verifyInfo">Glenmalter</h1>
-          <h2 class="verifyInfo verifyApp">Please enter your date of birth.</h2>
-          <div class="verifyInfo" id="verifyForm">
-              <input type="number" id="dd" placeholder="DD" min="1" max="31">
-              <input type="number" id="mm" placeholder="MM" min="1" max="12">
-              <input type="number" id="yy" placeholder="YY" min="1900" max="2026">
-          </div>
-          <div class="verifyInfo" id="verifyConfirm">
-              <button id="confirm">Confirm & Continue</button>
-          </div>
-          <div class="verifyInfo" id="terms">
-              <p>By continuing, you agree to our Terms of Service and Privacy Policy.</p>
-          </div>
-      </div>
-  </div>`
-}
-
-
-const confirmAgeBtn = document.getElementById('confirm');
-confirmAgeBtn.addEventListener('click', function(){
-  const yy = document.getElementById('yy');
-  if (yy.value <= 2008 && yy.value !== "" && yy.value >= 1900){
-    // load site/home page
-    document.cookie = "ageVerified=true; max-age=20; path=/"; // store cookie age verified
-    app.innerHTML = `    <div id="appHome">
+const home =  `    <div id="appHome">
         <nav>
             <div class="navclosed navicon"><img src="${hamburger}"></div>
             <h1 class="logo">Glenmalter</h1>
             <ul class="navigation">
-                <li><a href="shop">Whisky</a></li>
+                <li><a href="shop" class="whiskey">Whisky</a></li>
                 <li><a href="distillery">Distillery Experience</a></li>
                 <li><a href="story">Story</a></li>
             </ul>
@@ -125,7 +93,56 @@ confirmAgeBtn.addEventListener('click', function(){
                 <p>Please drink responsibly.</p>
             </div>
         </div>
-    </div>`; // load home page
+    </div>`;
+
+const app = document.getElementById('app');
+if (document.cookie.includes("ageVerified=true")) {
+  // laod home page
+  app.innerHTML = home;
+
+const navbarburger = document.querySelector(".navicon");
+const mobilenav = document.querySelector(".mobilenav");
+let statusClosed = true;
+
+navbarburger.addEventListener('click', function() {
+    if (statusClosed) {
+        statusClosed = false;
+        mobilenav.classList.remove("navclosed");
+        mobilenav.classList.add("navopen");
+    } else if (!statusClosed) {
+        statusClosed = true;
+        mobilenav.classList.remove("navopen");
+        mobilenav.classList.add("navclosed");
+    }
+})
+} else {
+app.innerHTML =  `<div id="verifyHome">
+      <div id="verificationCard">
+          <h1 class="verifyInfo">Glenmalter</h1>
+          <h2 class="verifyInfo verifyApp">Please enter your date of birth.</h2>
+          <div class="verifyInfo" id="verifyForm">
+              <input type="number" id="dd" placeholder="DD" min="1" max="31">
+              <input type="number" id="mm" placeholder="MM" min="1" max="12">
+              <input type="number" id="yy" placeholder="YY" min="1900" max="2026">
+          </div>
+          <div class="verifyInfo" id="verifyConfirm">
+              <button id="confirm">Confirm & Continue</button>
+          </div>
+          <div class="verifyInfo" id="terms">
+              <p>By continuing, you agree to our Terms of Service and Privacy Policy.</p>
+          </div>
+      </div>
+  </div>`
+}
+
+
+const confirmAgeBtn = document.getElementById('confirm');
+confirmAgeBtn.addEventListener('click', function(){
+  const yy = document.getElementById('yy');
+  if (yy.value <= 2008 && yy.value !== "" && yy.value >= 1900){
+    // load site/home page
+    document.cookie = "ageVerified=true; max-age=300; path=/"; // store cookie age verified
+    app.innerHTML = home; // load home page
 // nav bar btn to open and close
 const navbarburger = document.querySelector(".navicon");
 const mobilenav = document.querySelector(".mobilenav");
@@ -144,7 +161,6 @@ navbarburger.addEventListener('click', function() {
 })
   }
 })
-
 
 
 })

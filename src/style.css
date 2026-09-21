@@ -124,7 +124,6 @@ nav {
 }
 
 
-
 .navicon {
   visibility: hidden;
 }
@@ -426,7 +425,9 @@ section img {
     height: auto;
     text-align: center;
     margin: 0;
+    box-sizing: border-box;
   }
+
 
   #video {
     display: flex;
