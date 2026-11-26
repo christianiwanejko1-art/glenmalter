@@ -137,6 +137,10 @@ nav {
   height: 32px;
 }
 
+.logoLink {
+  text-decoration: none;
+}
+
 #homeBanner {
   background-image: radial-gradient(circle,hsla(0, 0%, 100%, 0.227) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 100%), url('./assets/whiskeyhome.jpg');
   background-position: center;
@@ -574,5 +578,9 @@ section img {
 
   #shopRight {
     grid-row: 1;
+  }
+
+  #products {
+    grid-template-columns: 1fr;
   }
 }
