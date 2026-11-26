@@ -5,10 +5,9 @@
   font-size: 16px;
   font-weight: 400;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
-body {
+body, #homeBanner, #mainContent, #video, #footer, #shopBanner, #productsContainer {
   overflow-x: hidden;
 }
 
