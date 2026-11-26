@@ -360,7 +360,6 @@ section img {
 
 /* products */
 #productsContainer {
-  width: 100vw;
   box-sizing: border-box;
   padding: 64px;
 }
@@ -583,4 +582,14 @@ section img {
   #products {
     grid-template-columns: 1fr;
   }
+
+  #shopRight h1 {
+    font-size: 32px;
+  }
+
+  #productsContainer {
+    margin: auto;
+    padding: 16px;
+  }
+
 }
