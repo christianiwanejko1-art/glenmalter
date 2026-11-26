@@ -129,7 +129,7 @@ nav {
 
 .navicon {
   visibility: hidden;
-  overflow-x: normal;
+  overflow-x: visible;
 }
 
 .navicon img {
