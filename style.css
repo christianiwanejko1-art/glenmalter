@@ -5,9 +5,10 @@
   font-size: 16px;
   font-weight: 400;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-body, #homeBanner, #mainContent, #video, #footer, #shopBanner, #productsContainer {
+body{
   overflow-x: hidden;
 }
 
@@ -128,6 +129,7 @@ nav {
 
 .navicon {
   visibility: hidden;
+  overflow-x: normal;
 }
 
 .navicon img {
